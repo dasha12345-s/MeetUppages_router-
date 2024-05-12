@@ -7,6 +7,13 @@ const DUMMY_MEETUPS = [
     image: 'https://images.pexels.com/photos/533769/pexels-photo-533769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     address: 'Some address 5, 34, 34213',
     description: 'This is a second  meetup'
+  },
+  {
+    id: 'm12',
+    title: 'A Meetup',
+    image: 'https://images.pexels.com/photos/533769/pexels-photo-533769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    address: 'Some address 5, 34, 34213',
+    description: 'This is a second  meetup'
   }
 ]
 
