@@ -73,3 +73,5 @@ export async function getStaticProps(context){
     }
   }
 export default MeetupDet;
+
+//'DONE'
