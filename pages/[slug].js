@@ -11,19 +11,39 @@ function MeetupDet(){
   )
 }
 
-export function getStaticProps(context){
+export async function getStaticPaths(){
+  return{
+    fallback: false,
+    paths:[
+      {
+        params: {
+          slug: 'm1',
+        },
+      },
+      {
+        params: {
+          slug: 'm2',
+        }
+      }
+    ]
+  }
+}
 
-  const meetupID = context.params;
+export async function getStaticProps(context){
 
-  console.log(meetupID)
+  const slug = context.params.slug;
+
+  console.log(slug)
 
   return{
     props: {
-      image: 'https://images.pexels.com/photos/533769/pexels-photo-533769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      id: meetupID,
-      title: 'first meetup',
-      address: 'address',
-      description: 'First'
+      meetupData: {
+        image: 'https://images.pexels.com/photos/533769/pexels-photo-533769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        id: slug,
+        title: 'first meetup',
+        address: 'address',
+        description: 'First'
+      }
     }
   }
 }
